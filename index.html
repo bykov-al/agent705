@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b56fa">
+  <link rel="shortcut icon" href="./images/shortcut-icon.png">
+  <link href="./pages/index.css?2" rel="stylesheet" type="text/css">
+  <link rel="manifest" href="./manifest/manifest.json">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7344769062544520"
+     crossorigin="anonymous"></script>
+  <title>Информация с заявок по прямым продажам</title>
+</head>
+<body class="page">
+  <header class="header">
+    <a href="./index.html"><img class="header__logo" src="./images/logo.png" alt="Логотип"></a>
+    <a class="header__link" href="./admin.php">Войти</a>
+  </header>
+  <section class="section section__content">
+    <form class="form" method="post" action="/send.php">
+      <div class="form__group">
+        <input type="text" class="form__field" placeholder="ФИО абонента" name="fio" id='fio' required />
+        <label for="fio" class="form__label">Фио(полностью):*</label>
+      </div>
+      <div class="form__group">
+        <input type="text" class="form__field" placeholder="Серия" name="passport-serie" id='passport' maxlength="4" style="width:100px;" required />
+        <input type="text" class="form__field" placeholder="Номер" name="passport-number" id='passport' maxlength="6" style="width:160px;" required />
+        <label for="passport" class="form__label">Паспорт: серия, номер: </label>
+      </div>
+      <div class="form__group">
+        <input type="text" class="form__field" placeholder="Кем выдан" name="passport-kem" id='passport-kem' required />
+        <label for="passport-kem" class="form__label">Паспорт: кем выдан: </label>
+      </div>
+      <div class="form__group">
+        <input type="text" class="form__field" placeholder="Когда выдан" name="passport-kogda" id='passport-kogda' required />
+        <label for="passport-kogda" class="form__label">Паспорт: кем выдан: </label>
+      </div>
+      <div class="form__group">
+        <input type="date" class="form__field" placeholder="Когда выдан" name="birthday" id='birthday'>
+        <label for="birthday" class="form__label">Дата рождения: </label>
+      </div>
+      <h2 class="form__title">Город*: </h2>
+      <div id="city-options" type="city" class="city-grid">
+        <label class="custom-radio"><input type="radio" name="city" value="kem"> Кемерово</label>
+        <label class="custom-radio"><input type="radio" name="city" value="len"> Ленинск</label>
+        <label class="custom-radio"><input type="radio" name="city" value="berezovskij"> Березовский</label>
+        <label class="custom-radio"><input type="radio" name="city" value="pls"> Полысаево</label>
+        <label class="custom-radio"><input type="radio" name="city" value="urga"> Юрга</label>
+        <label class="custom-radio"><input type="radio" name="city" value="anjttk"> Анжерка_ТТК</label>
+        <label class="custom-radio"><input type="radio" name="city" value="belttk"> Белово_ТТК</label>
+        <label class="custom-radio"><input type="radio" name="city" value="topkittk"> Топки_ТТК</label>
+        <label class="custom-radio"><input type="radio" name="city" value="grttk"> Грамотеино_ТТК</label>
+        <label class="custom-radio"><input type="radio" name="city" value="gurttk"> Гурьевск_ТТК</label>
+        <label class="custom-radio"><input type="radio" name="city" value="inskttk"> Инской_ТТК</label>
+      </div>
+      <div class="form__group">
+        <select name="street" id="name-street" class="valid form__field" placeholder="Улица">
+          <option value=""></option>
+        </select>
+        <label for="name-street" class="form__label">Улица:* </label>
+      </div>
+      <div class="form__group">
+        <select name="build" id="name-build" class="valid form__field" placeholder="Дом">
+          <option value=""></option>
+        </select>
+        <label for="name-build" class="form__label">Дом:* </label>
+      </div>
+      <div class="form__group">
+        <input type="text" class="form__field" placeholder="Номер квартиры" name="flat" id='flat' required />
+        <label for="flat" class="form__label">Номер квартиры:* </label>
+      </div>
+      <div class="form__group">
+        <input type="text" class="form__field" placeholder="8-999-999-99-99" name="phone" id='phone' maxlength="11" required />
+        <label for="phone" class="form__label">Мобильный телефон:* </label>
+      </div>
+      <nav class="menu">
+        <a class="menu__item" href="./ras.html">Расклейка на карте</a>
+        <a class="menu__item menu__item_deactivate menu__item__popup-499" href="">Пакет каналов для 449 и 499</a>
+        <a class="menu__item menu__item_deactivate menu__item__popup-559" href="">Пакет каналов для 559 и 659</a>
+      </nav>
+      <h2 class="form__title">Оборудование: </h2>
+      <div class="oborudovanie-grid">
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> WiFi роутер Tp-Link C20 Продажа 2999р</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> WiFi роутер Tp-Link C20 рассрочка на 12мес 300р мес</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> WiFi роутер Tp-Link C5 Продажа 4290р</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> WiFi роутер Tp-Link C5 рассрочка на 12мес 430р мес</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> Приставка IPTV Eltex 720 Продажа 5850р</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> Приставка IPTV Eltex 720 рассрочка на 12мес 585р мес</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> Bluetooth пульт с голосовым управлением Продажа 800р</label>
+        <label><input class="input input__checkbox" type="checkbox" name="dopoborudovanie" value=""> Белый IP адрес 50р/мес. Подключение бесплатно</label>
+      </div>
+      <div class="tarifs city_kem">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 329 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 300 мбит/сек 700 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 500 мбит/сек 850 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 559р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 300 мбит/сек 160SD+6HD 950р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 500 мбит/сек 160SD+6HD 1150р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+      </div>
+      <div  class="tarifs city_anjttk">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 299 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 449р 100 Мбит/Сек 129 Каналов БЕЗ ОБОРУДОВАНИЯ! </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 599р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+      </div>
+      <div class="tarifs city_belttk">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 299 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 449р 100 Мбит/Сек 129 Каналов БЕЗ ОБОРУДОВАНИЯ! </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 599р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+      </div>
+      <div class="tarifs city_grttk">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 299 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 449р 100 Мбит/Сек 129 Каналов БЕЗ ОБОРУДОВАНИЯ! </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 599р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+      </div>
+      <div class="tarifs city_gurttk">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 299 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 449р 100 Мбит/Сек 129 Каналов БЕЗ ОБОРУДОВАНИЯ! </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 599р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+      </div>
+      <div class="tarifs city_inskttk">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 299 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 449р 100 Мбит/Сек 129 Каналов БЕЗ ОБОРУДОВАНИЯ! </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 599р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+      </div>
+      <div class="tarifs city_topkittk">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 299 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 449р 100 Мбит/Сек 129 Каналов БЕЗ ОБОРУДОВАНИЯ! </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 599р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+      </div>
+      <div class="tarifs city_len">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 329 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 300 мбит/сек 700 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 500 мбит/сек 850 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 559р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 300 мбит/сек 160SD+6HD 950р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 500 мбит/сек 160SD+6HD 1150р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+      </div>
+      <div class="tarifs city_berezovskij">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 329 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 300 мбит/сек 700 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 500 мбит/сек 850 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 559р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 300 мбит/сек 160SD+6HD 950р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 500 мбит/сек 160SD+6HD 1150р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+      </div>
+      <div class="tarifs city_pls">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 329 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 300 мбит/сек 700 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 500 мбит/сек 850 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129  Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 559р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 300 мбит/сек 160SD+6HD 950р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 500 мбит/сек 160SD+6HD 1150р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+      </div>
+      <div class="tarifs city_urga">
+        <h2 class="form__title">Тарифы: </h2>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 329 100 Мбит/Сек </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 379р 100 Мбит/Сек + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 300 мбит/сек 700 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">ШПД 500 мбит/сек 850 р. + аренда роутера за 59р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 499р 100 Мбит/Сек 129 Каналов + аренда приставки за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 559р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 659р 100 Мбит/Сек 128  Каналов + аренда приставки за 1р. + аренда роутера за 1р. </label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 300 мбит/сек 160SD+6HD 950р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+        <label class="label"><input type="radio" name="tarif" value="">Пакет IPTV 500 мбит/сек 160SD+6HD 1150р. + аренда приставки за 1р. роутер аренда за 59р/мес</label>
+      </div>
+      <div class="channel">
+
+      </div>
+      <input type="submit" class="submit">
+      <input type="reset" class="reset">
+    </form>
+  </section>
+  <div class="popup popup_499">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+      <div class="popup__wrap">
+        <h2 class="popup__title">Список каналов для пакета 449, 499</h2>
+        <p class="popup__channel popup__channel_arch_true">Доступен архив</p>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Эфирные</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Shopping Live</p>
+          <p class="popup__channel">TORRE RICCA</p>
+          <p class="popup__channel">БСТ</p>
+          <p class="popup__channel">Наша Тема</p>
+          <p class="popup__channel">Первый канал</p>
+          <p class="popup__channel popup__channel_arch_true">Россия 1</p>
+          <p class="popup__channel popup__channel_arch_true">Матч!</p>
+          <p class="popup__channel popup__channel_arch_true">НТВ</p>
+          <p class="popup__channel popup__channel_arch_true">5 Канал</p>
+          <p class="popup__channel">Россия К</p>
+          <p class="popup__channel">Россия 24</p>
+          <p class="popup__channel popup__channel_arch_true">Карусель</p>
+          <p class="popup__channel">ОТР</p>
+          <p class="popup__channel">ТВЦ</p>
+          <p class="popup__channel popup__channel_arch_true">Рен</p>
+          <p class="popup__channel">Спас</p>
+          <p class="popup__channel popup__channel_arch_true">СТС</p>
+          <p class="popup__channel popup__channel_arch_true">Домашний</p>
+          <p class="popup__channel popup__channel_arch_true">ТВ 3</p>
+          <p class="popup__channel">Пятница</p>
+          <p class="popup__channel popup__channel_arch_true">Звезда</p>
+          <p class="popup__channel">Мир</p>
+          <p class="popup__channel popup__channel_arch_true">ТНТ</p>
+          <p class="popup__channel">МУЗ-ТВ</p>
+          <p class="popup__channel">Кузбасс-1</p>
+          <p class="popup__channel">Известия-Кемерово</p>
+          <p class="popup__channel">Shopping Live</p>
+          <p class="popup__channel">Ювелирочка</p>
+          <p class="popup__channel popup__channel_arch_true">Дисней</p>
+          <p class="popup__channel">РБК - Кемерово</p>
+          <p class="popup__channel popup__channel_arch_true">Ю-ТВ</p>
+          <p class="popup__channel">8 канал</p>
+          <p class="popup__channel">Shop and Show</p>
+          <p class="popup__channel">Сделано в Кузбассе</p>
+          <p class="popup__channel">San Porto</p>
+          <p class="popup__channel popup__channel_arch_true">Че</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Развлекательные и Хобби</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">ТНТ4</p>
+          <p class="popup__channel">Охота и рыбалка</p>
+          <p class="popup__channel">Драйв</p>
+          <p class="popup__channel">Усадьба</p>
+          <p class="popup__channel">2x2</p>
+          <p class="popup__channel">Суббота</p>
+          <p class="popup__channel">СТС Love</p>
+          <p class="popup__channel">Точка ТВ</p>
+          <p class="popup__channel">Fashion TV</p>
+          <p class="popup__channel">Тномер</p>
+          <p class="popup__channel">Время</p>
+          <p class="popup__channel">Телекафе</p>
+          <p class="popup__channel">Бобёр</p>
+          <p class="popup__channel">Сарафан</p>
+          <p class="popup__channel">Открытый мир. Здоровье</p>
+          <p class="popup__channel">Продвижение</p>
+          <p class="popup__channel">Поехали!</p>
+          <p class="popup__channel">Здоровое ТВ</p>
+          <p class="popup__channel">7tv</p>
+          <p class="popup__channel">Ретро</p>
+          <p class="popup__channel">Суббота</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Кино и сериалы</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Fox</p>
+          <p class="popup__channel">Fox Life</p>
+          <p class="popup__channel">Русский иллюзион</p>
+          <p class="popup__channel">Иллюзион+</p>
+          <p class="popup__channel">Русский роман</p>
+          <p class="popup__channel">TV XXI</p>
+          <p class="popup__channel">Еврокино</p>
+          <p class="popup__channel">Кино ТВ</p>
+          <p class="popup__channel">A2</p>
+          <p class="popup__channel">Zee TV</p>
+          <p class="popup__channel">Наше новое кино</p>
+          <p class="popup__channel">Кинокомедия</p>
+          <p class="popup__channel">Родное кино</p>
+          <p class="popup__channel">Феникс+кино</p>
+          <p class="popup__channel">Калейдоскоп ТВ</p>
+          <p class="popup__channel">Победа</p>
+          <p class="popup__channel">Дом кино</p>
+          <p class="popup__channel">Мосфильм</p>
+          <p class="popup__channel">Дом кино Премиум HD</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Познавательные</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Домашние животные</p>
+          <p class="popup__channel">КТО ЕСТЬ КТО</p>
+          <p class="popup__channel">Zooпарк</p>
+          <p class="popup__channel">National Geographic</p>
+          <p class="popup__channel">Моя планета</p>
+          <p class="popup__channel">Наука</p>
+          <p class="popup__channel">Вопросы и ответы</p>
+          <p class="popup__channel">Психология</p>
+          <p class="popup__channel">National Geographic Wild</p>
+          <p class="popup__channel">История</p>
+          <p class="popup__channel">Nano</p>
+          <p class="popup__channel">Luxury</p>
+          <p class="popup__channel">ТНВ Планета</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Музыка</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">ТНТ Music</p>
+          <p class="popup__channel">Europa Plus TV</p>
+          <p class="popup__channel">Шансон-ТВ</p>
+          <p class="popup__channel">RU TV</p>
+          <p class="popup__channel">BRIDGE</p>
+          <p class="popup__channel">MusicBox Russia</p>
+          <p class="popup__channel">Восток ТВ</p>
+          <p class="popup__channel">Ля-минор ТВ</p>
+          <p class="popup__channel">Жар Птица</p>
+          <p class="popup__channel">Музыка Первого</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Новости и общество</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Успех</p>
+          <p class="popup__channel">Известия</p>
+          <p class="popup__channel">Мир 24</p>
+          <p class="popup__channel">Евроновости</p>
+          <p class="popup__channel">Про бизнес</p>
+          <p class="popup__channel">Москва Доверие</p>
+          <p class="popup__channel">Беларусь 24</p>
+          <p class="popup__channel">Крым 24</p>
+          <p class="popup__channel">Большая Азия</p>
+          <p class="popup__channel">Союз</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">HD каналы</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">MusicBox Russia HD</p>
+          <p class="popup__channel">RTD HD</p>
+          <p class="popup__channel">Матч! Игра HD</p>
+          <p class="popup__channel">Матч! HD</p>
+          <p class="popup__channel">Russian Travel Guide HD</p>
+          <p class="popup__channel">Мир 24 HD</p>
+          <p class="popup__channel popup__channel_arch_true">Первый Канал HD</p>
+          <p class="popup__channel">Россия HD</p>
+          <p class="popup__channel">Сделано в Кузбассе HD</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Детские</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Nickelodeon</p>
+          <p class="popup__channel">Малыш</p>
+          <p class="popup__channel">Уникум</p>
+          <p class="popup__channel">Детский мир</p>
+          <p class="popup__channel">Мультиландия</p>
+          <p class="popup__channel">O!</p>
+          <p class="popup__channel">Мульт</p>
+          <p class="popup__channel">СТС kids HD</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Спорт</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">KHL</p>
+          <p class="popup__channel">Матч! Страна</p>
+          <p class="popup__channel">Fightbox</p>
+        </div>
+      </div>
+      <button type="button" class="popup__close-button"></button>
+    </div>
+  </div>
+  <div class="popup popup_559">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+      <div class="popup__wrap">
+        <h2 class="popup__title">Список каналов для пакета 559, 659</h2>
+        <p class="popup__channel popup__channel_arch_true">Доступен архив</p>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Эфирные</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Первый канал</p>
+          <p class="popup__channel popup__channel_arch_true">Россия 1</p>
+          <p class="popup__channel popup__channel_arch_true">Матч!</p>
+          <p class="popup__channel popup__channel_arch_true">НТВ</p>
+          <p class="popup__channel popup__channel_arch_true">5 Канал</p>
+          <p class="popup__channel">Россия К</p>
+          <p class="popup__channel">Россия 24</p>
+          <p class="popup__channel popup__channel_arch_true">Карусель</p>
+          <p class="popup__channel">ОТР</p>
+          <p class="popup__channel">ТВЦ</p>
+          <p class="popup__channel popup__channel_arch_true">Рен</p>
+          <p class="popup__channel">Спас</p>
+          <p class="popup__channel popup__channel_arch_true">СТС</p>
+          <p class="popup__channel popup__channel_arch_true">Домашний</p>
+          <p class="popup__channel popup__channel_arch_true">ТВ 3</p>
+          <p class="popup__channel">Пятница</p>
+          <p class="popup__channel popup__channel_arch_true">Звезда</p>
+          <p class="popup__channel">Мир</p>
+          <p class="popup__channel popup__channel_arch_true">ТНТ</p>
+          <p class="popup__channel">МУЗ-ТВ</p>
+          <p class="popup__channel">Shopping Live</p>
+          <p class="popup__channel">Ювелирочка</p>
+          <p class="popup__channel">Shop and Show</p>
+          <p class="popup__channel">San Porto</p>
+          <p class="popup__channel">Кузбасс-1</p>
+          <p class="popup__channel">Известия-Кемерово</p>
+          <p class="popup__channel">РБК - Кемерово</p>
+          <p class="popup__channel">Ю-ТВ</p>
+          <p class="popup__channel">8 канал</p>
+          <p class="popup__channel">Че</p>
+          <p class="popup__channel">Сделано в Кузбассе</p>
+          <p class="popup__channel">Сделано в Кузбассе HD</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Развлекательные и Хобби</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">ТНТ4</p>
+          <p class="popup__channel">Охота и рыбалка</p>
+          <p class="popup__channel">Драйв</p>
+          <p class="popup__channel">Авто24</p>
+          <p class="popup__channel">Авто Плюс</p>
+          <p class="popup__channel">Усадьба</p>
+          <p class="popup__channel">Загородная жизнь</p>
+          <p class="popup__channel">2x2</p>
+          <p class="popup__channel">Театр</p>
+          <p class="popup__channel">Суббота</p>
+          <p class="popup__channel">СТС Love</p>
+          <p class="popup__channel">Точка ТВ</p>
+          <p class="popup__channel">E TV</p>
+          <p class="popup__channel">Кухня ТВ</p>
+          <p class="popup__channel">Fashion TV</p>
+          <p class="popup__channel">Сарафан</p>
+          <p class="popup__channel">Продвижение</p>
+          <p class="popup__channel">Здоровое ТВ</p>
+          <p class="popup__channel">Оружие</p>
+          <p class="popup__channel">Ретро</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Кино и сериалы</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Fox</p>
+          <p class="popup__channel">Fox Life</p>
+          <p class="popup__channel">Русский иллюзион</p>
+          <p class="popup__channel">Иллюзион+</p>
+          <p class="popup__channel">Русский роман</p>
+          <p class="popup__channel">Русский детектив</p>
+          <p class="popup__channel">TV XXI</p>
+          <p class="popup__channel">Еврокино</p>
+          <p class="popup__channel">Кино ТВ</p>
+          <p class="popup__channel">A2</p>
+          <p class="popup__channel">Zee TV</p>
+          <p class="popup__channel">Индийское кино</p>
+          <p class="popup__channel">НСТ</p>
+          <p class="popup__channel">Наше новое кино</p>
+          <p class="popup__channel">Кинокомедия</p>
+          <p class="popup__channel">Родное кино</p>
+          <p class="popup__channel">Cinema</p>
+          <p class="popup__channel">Феникс+кино</p>
+          <p class="popup__channel">Победа</p>
+          <p class="popup__channel">Дом кино</p>
+          <p class="popup__channel">Paramount Comedy</p>
+          <p class="popup__channel">Мосфильм</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Познавательные</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Домашние животные</p>
+          <p class="popup__channel">Живая планета</p>
+          <p class="popup__channel">Zooпарк</p>
+          <p class="popup__channel">National Geographic</p>
+          <p class="popup__channel">Моя планета</p>
+          <p class="popup__channel">Наука</p>
+          <p class="popup__channel popup__channel_arch_true">Т24</p>
+          <p class="popup__channel">Доктор</p>
+          <p class="popup__channel">Тайны галактики</p>
+          <p class="popup__channel">Ocean-TV</p>
+          <p class="popup__channel">Вопросы и ответы</p>
+          <p class="popup__channel">Психология</p>
+          <p class="popup__channel">Russian Travel Guide</p>
+          <p class="popup__channel">National Geographic Wild</p>
+          <p class="popup__channel">История</p>
+          <p class="popup__channel">365 дней ТВ</p>
+          <p class="popup__channel">ТНВ Планета</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Музыка</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">MTV Россия</p>
+          <p class="popup__channel">ТНТ Music</p>
+          <p class="popup__channel">Europa Plus TV</p>
+          <p class="popup__channel">Шансон-ТВ</p>
+          <p class="popup__channel">RU TV</p>
+          <p class="popup__channel">BRIDGE</p>
+          <p class="popup__channel">MusicBox Russia</p>
+          <p class="popup__channel">Ля-минор ТВ</p>
+          <p class="popup__channel">Жар Птица</p>
+          <p class="popup__channel">Жара</p>
+          <p class="popup__channel">1HD Music Television</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Новости и общество</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Успех</p>
+          <p class="popup__channel">Известия</p>
+          <p class="popup__channel">Мир 24</p>
+          <p class="popup__channel">Евроновости</p>
+          <p class="popup__channel">Союз</p>
+          <p class="popup__channel">Про бизнес</p>
+          <p class="popup__channel">Москва Доверие</p>
+          <p class="popup__channel">Беларусь 24</p>
+          <p class="popup__channel">Крым 24</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">HD каналы</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel popup__channel_arch_true">Первый Канал HD</p>
+          <p class="popup__channel">Россия HD</p>
+          <p class="popup__channel">MusicBox Russia HD</p>
+          <p class="popup__channel">RTD HD</p>
+          <p class="popup__channel">Travel + Adventure HD</p>
+          <p class="popup__channel">Матч! Игра HD</p>
+          <p class="popup__channel">Матч! HD</p>
+          <p class="popup__channel">Мосфильм</p>
+          <p class="popup__channel">Мир 24 HD</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Детские</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Nicktoons</p>
+          <p class="popup__channel">Nickelodeon</p>
+          <p class="popup__channel">Уникум</p>
+          <p class="popup__channel">Детский мир</p>
+          <p class="popup__channel">Мультиландия</p>
+          <p class="popup__channel">Мама</p>
+          <p class="popup__channel">TiJi</p>
+          <p class="popup__channel popup__channel_arch_true">Мульт</p>
+          <p class="popup__channel">Ani</p>
+          <p class="popup__channel">Мультимузыка</p>
+          <p class="popup__channel">Дисней</p>
+        </div>
+      </div>
+      <div class="popup__content">
+        <h3 class="popup__subtitle">Спорт</h3>
+        <div class="popup__channel-container">
+          <p class="popup__channel">Футбол</p>
+          <p class="popup__channel popup__channel_arch_true">Матч! Арена</p>
+          <p class="popup__channel">Матч! Боец</p>
+          <p class="popup__channel">KHL</p>
+          <p class="popup__channel">Матч! Страна</p>
+          <p class="popup__channel">Extreme Sports Сhannel</p>
+          <p class="popup__channel">Живи!</p>
+        </div>
+      </div>
+      <button type="button" class="popup__close-button"></button>
+    </div>
+  </div>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+            // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      }).catch(function(err) {
+        console.log(err)
+      });
+    });
+  } else {
+    console.log('service worker is not supported');
+  }
+  </script>
+  <script src="./scripts/jquery.js"></script>
+  <script src="./scripts/streets.js"></script>
+  <script src="./scripts/channel/channel.js"></script>
+  <script src="./scripts/address-list/kemerovo.js"></script>
+  <script src="./scripts/address-list/anjerka.js"></script>
+  <script src="./scripts/address-list/belovo.js"></script>
+  <script src="./scripts/address-list/berezovskij.js"></script>
+  <script src="./scripts/address-list/gramoteino.js"></script>
+  <script src="./scripts/address-list/gurievsk.js"></script>
+  <script src="./scripts/address-list/inskoy.js"></script>
+  <script src="./scripts/address-list/leninsk.js"></script>
+  <script src="./scripts/address-list/polysaevo.js"></script>
+  <script src="./scripts/address-list/topki.js"></script>
+  <script src="./scripts/address-list/urga.js"></script>
+</body>
+</html>
