@@ -583,7 +583,6 @@ city_streets["kem"] = {builds: [
 {street: "Ленина пр-кт", build: "117б_ТТК"},
 {street: "Ленина пр-кт", build: "118"},
 {street: "Ленина пр-кт", build: "118а"},
-{street: "Ленина пр-кт", build: "119"},
 {street: "Ленина пр-кт", build: "119а"},
 {street: "Ленина пр-кт", build: "119а_ТТК"},
 {street: "Ленина пр-кт", build: "120"},
