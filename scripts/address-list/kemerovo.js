@@ -1213,6 +1213,7 @@ city_streets["kem"] = {builds: [
 {street: "Рекордная ул", build: "1"},
 {street: "Рекордная ул", build: "15"},
 {street: "Рекордная ул", build: "19"},
+{street: "Рекордная ул", build: "21"},
 {street: "Рекордная ул", build: "1а"},
 {street: "Рекордная ул", build: "27"},
 {street: "Рекордная ул", build: "27а"},
