@@ -80,6 +80,8 @@ city_streets["urga"] = {builds: [
     {street: "Кузбасский пр-кт", build: "8"},
     {street: "Ленинградская ул", build: "3"},
     {street: "Ленинградская ул", build: "31"},
+    {street: "Ленинградская ул", build: "32 корпус 1"},
+    {street: "Ленинградская ул", build: "32 корпус 2"},
     {street: "Ленинградская ул", build: "33"},
     {street: "Ленинградская ул", build: "35"},
     {street: "Ленинградская ул", build: "36"},
