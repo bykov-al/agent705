@@ -123,7 +123,7 @@ city_streets["belttk"] = {builds: [
   {street: "Октябрьская", build: "55"},
   {street: "Октябрьская", build: "59 с 1 по 108кв НТВ"},
   {street: "Октябрьская", build: "63"},
-  {street: "Октябрьская", build: "65"},
+  {street: "Октябрьская", build: "65 только если есть линия ТТК"},
   {street: "Октябрьская", build: "7"},
   {street: "Почтовый", build: "8"},
   {street: "Пржевальского (Новый Городок)", build: "14"},
