@@ -55,6 +55,8 @@ city_streets["pls"] = {builds: [
   {street: "Молодежная ул", build: "17"},
   {street: "Молодежная ул", build: "19"},
   {street: "Молодежная ул", build: "31"},
+  {street: "Молодогвардейцев ул", build: "24"},
+  {street: "Молодогвардейцев ул", build: "26"},
   {street: "Молодогвардейцев ул", build: "28"},
   {street: "Молодогвардейцев ул", build: "30"},
   {street: "Республиканская ул", build: "1"},
