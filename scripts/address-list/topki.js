@@ -33,7 +33,7 @@ city_streets["topkittk"] = {builds: [
   {street: "Лермонтова", build: "1"},
   {street: "Лермонтова", build: "1а"},
   {street: "Лермонтова", build: "2"},
-  {street: "Лермонтова", build: "2а Возможно подключение только активных абонентов ТТК"},
+  {street: "Лермонтова", build: "2а"},
   {street: "Лермонтова", build: "3"},
   {street: "Лермонтова", build: "4"},
   {street: "Луначарского", build: "1"},
