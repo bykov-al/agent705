@@ -262,7 +262,6 @@ city_streets["kem"] = {builds: [
 {street: "Дарвина ул", build: "3_ТТК"},
 {street: "Дарвина ул", build: "3а_ТТК"},
 {street: "Дарвина ул", build: "9_ТТК"},
-{street: "Демьяна Бедного ул", build: "1_ТТК"},
 {street: "Демьяна Бедного ул", build: "13_ТТК"},
 {street: "Демьяна Бедного ул", build: "15_ТТК"},
 {street: "Демьяна Бедного ул", build: "3_ТТК"},
