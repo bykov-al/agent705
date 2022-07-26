@@ -229,7 +229,7 @@ city_streets["belttk"] = {builds: [
   {street: "Юности", build: "7"},
   {street: "Юности", build: "8"},
   {street: "Юности", build: "9"},
-  {street: "Юности", build: "14"},
+  {street: "Юности", build: "14_2 подъезд НТВ"},
   {street: "Юности", build: "24"}], streets: [{street: "3-й"},
   {street: "6-й"},
   {street: "Гражданская (Новый Городок)"},
